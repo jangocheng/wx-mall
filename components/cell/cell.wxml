@@ -1,0 +1,12 @@
+<!--components/cell.wxml-->
+<view class="w-cell"  data-route="{{path}}">
+  <view class='w-cell__left'>
+    <w-icon icon="{{icon}}" size="20" class="w-cell_icon"></w-icon>
+    <text>{{text}}</text>
+  </view>
+  <view class='w-cell__right'>
+  <slot name="custom"></slot>
+  <text class="w-cell__tip">{{tip}}</text>
+  <w-icon icon="right" class="w-cell__arrow" ></w-icon>    
+  </view>
+</view>

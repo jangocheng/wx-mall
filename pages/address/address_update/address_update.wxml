@@ -1,0 +1,31 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="input-cell">
+    <view class="address-update-block">
+      <view class="input-name">收件人</view>
+      <input value="" name="username"  placeholder="收件人" placeholder-class="placeholder" class="input"></input>
+    </view>
+    <view class="address-update-block">
+      <view class="input-name" >联系电话</view>
+      <input value="" name="phone" placeholder="联系电话" placeholder-class="placeholder" class="input"></input>
+    </view>
+    <view class="address-update-block">
+      <view class="input-name">所在地区</view> 
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" class="input" name="city">
+    <view class="picker">
+      当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+    </view>
+  </picker>
+    </view>
+    <view class="address-update-block">
+      <view class="input-name">详细地址</view>
+      <textarea value="{{detailAddress}}" auto-height name="detailAddress" placeholder="详细地址" placeholder-class="placeholder" class="textarea"></textarea>
+    </view>
+     <view class="address-update-block" style='border-bottom:none;'>
+      <view class="input-name">邮编</view>
+      <input value="" name="post" placeholder="邮编" placeholder-class="placeholder" class="input"></input>
+    </view>
+  </view>
+  <view class="btn-area">
+    <button formType="submit" type='warn'>保存</button>
+  </view>
+</form>

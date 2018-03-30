@@ -1,0 +1,29 @@
+.w-cell{
+  border-top:1px solid #eee; 
+  border-bottom:1px solid #eee; 
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  margin-top: -1px;
+  background: #fff;
+}
+.w-cell__left{
+  display: flex;
+  align-items: center;
+}
+.w-cell_icon{
+  margin-right: 16rpx;
+}
+.w-cell__right{
+  display: flex;
+  align-items: center;
+}
+.w-cell__tip{
+  color: #999;
+}
+.w-cell__arrow{
+  margin-left: 16rpx;
+  color: #999;
+}

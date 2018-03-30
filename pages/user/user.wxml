@@ -1,0 +1,36 @@
+<!--pages/user/user.wxml-->
+<view class="user-wrapper" >
+  <view class="user-info">
+    <view class="user-background-wrapper">
+      <view class="user-background" style="background-image:url({{avatar}})"></view>
+      <view class="filter"></view>
+    </view>
+    <view class="user-basic-info">
+      <image src="{{avatar}}" class="avatar"></image>
+      <text class="name">{{name}}</text>
+    </view>
+  </view>
+  <w-cell text="全部订单" tip="查看所有订单" icon="calendar"  path="/pages/cart/cart"></w-cell>
+  <view class="user-process">
+    <view class="user-process__item">
+      <w-icon icon="pay"  size="24"></w-icon>
+      <text class="user-process__name">待支付</text>
+    </view>
+    <view class="user-process__item">
+      <w-icon icon="send"  size="24"></w-icon>
+      <text class="user-process__name">待发货</text>
+    </view>
+    <view class="user-process__item">
+      <w-icon icon="deliver"  size="24"></w-icon>
+      <text class="user-process__name">待收货</text>
+    </view>
+    <view class="user-process__item">
+      <w-icon icon="safe" size="24"></w-icon>
+      <text class="user-process__name">维权</text>
+    </view>
+  </view>
+  <w-cell text="我的余额" tip="0.00" icon="recharge" path="/pages/cart/cart"></w-cell>
+  <w-cell text="我的积分" tip="0.00" icon="evaluate" path="/pages/cart/cart"></w-cell>
+  <w-cell text="我的优惠券" tip="0" icon="ticket"  path="/pages/cart/cart"></w-cell>
+  <w-cell text="收货地址"  icon="location"  path="/pages/address/address"></w-cell>
+</view>

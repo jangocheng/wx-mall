@@ -1,0 +1,32 @@
+<!--components/address/address.wxml-->
+<radio-group class="radio-group" bindchange="radioChange">
+<view class='w-address' wx:for="{{addressData}}" wx:key="{{index}}">
+  <view class='w-address__top'>
+    <text class='w-address__name'>{{item.name}}</text>
+    <text class='w-address__number'>{{item.phone}}</text>
+  </view>
+  <view class='w-address__middle'>
+    <view class='w-address__address'>{{item.address}}</view>   
+  </view>
+  <view class='w-address__bottom'>
+    <view>
+      <label class="radio">
+    <radio value="{{item.id}}" checked="{{item.checked}}"/>
+    <text wx:if="{{item.checked}}">默认地址</text>
+    <text wx:else>设置默认地址</text>
+  </label>
+    </view>
+    <view class="w-address-wrapper__btn">
+      <view class='w-address__btn'>
+        <w-icon icon="edit"></w-icon>
+        <text>编辑</text>
+      </view>
+      <view class='w-address__btn'>
+      <w-icon icon="delete"></w-icon>
+      <text>删除</text>
+    </view>
+  </view>
+  </view>
+</view>
+
+</radio-group>

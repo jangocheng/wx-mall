@@ -1,0 +1,135 @@
+<!--pages/category/category.wxml-->
+<view class="category">
+  <view class='nav' style='width:180rpx'>
+      <scroll-view scroll-y style='height:{{height}}px;' class="scroll" > 
+        <view class='item {{activeIndex == index ? "active" : ""}}' wx:for="{{category}}" wx:key="index" 
+              bindtap='handleNav' id='{{index}}'
+        >{{item.name}}</view>
+      </scroll-view>
+  </view>
+  <view class='content'>
+      <scroll-view scroll-y style='height:{{height}}px;' > 
+         <view class="goods-wrapper">
+            <view class='banner-wrapper'>
+              <image src='https://img20.360buyimg.com/mcoss/jfs/t16273/143/46476745/45673/cba0840c/5a28ef10N82ab81d3.jpg'></image>
+            </view>
+            <view class='list'>
+              <text class='list-title'>热门品牌</text>
+              <view class='list-content'>
+                <view class='list-item'>
+                    <image src='https://img30.360buyimg.com/focus/jfs/t13411/188/926813276/3945/a4f47292/5a1692eeN105a64b4.png'></image>
+                    <text>小米</text>
+                </view>
+                <view class='list-item'>
+                    <image src='https://img14.360buyimg.com/focus/jfs/t11929/135/2372293765/1396/e103ec31/5a1692e2Nbea6e136.jpg'></image>
+                    <text>华为</text>
+                </view>
+                <view class='list-item'>
+                    <image src='https://img10.360buyimg.com/focus/jfs/t12178/348/911080073/4732/db0ad9c7/5a1692e2N6df7c609.jpg'></image>
+                    <text>荣耀</text>
+                </view>
+                <view class='list-item'>
+                    <image src='https://img20.360buyimg.com/focus/jfs/t13759/194/897734755/2493/1305d4c4/5a1692ebN8ae73077.jpg'></image>
+                    <text>苹果</text>
+                </view>
+                <view class='list-item'>
+                    <image src='https://img11.360buyimg.com/focus/jfs/t11014/359/2341377211/2777/1755c29c/5a169244Nff0179e0.png'></image>
+                    <text>vivo</text>
+                </view>
+                <view class='list-item'>
+                    <image src='https://img13.360buyimg.com/focus/jfs/t13036/273/932026474/2570/a3517c7d/5a169254N4bbbd9fb.png'></image>
+                    <text>oppo</text>
+                </view>
+              </view>
+            </view>
+            <view class='list'>
+              <text class='list-title'>热门品牌</text>
+              <view class='list-content'>
+                <view class='list-item'>
+                    <image src='https://img30.360buyimg.com/focus/jfs/t13411/188/926813276/3945/a4f47292/5a1692eeN105a64b4.png'></image>
+                    <text>小米</text>
+                </view>
+                <view class='list-item'>
+                    <image src='https://img30.360buyimg.com/focus/jfs/t13411/188/926813276/3945/a4f47292/5a1692eeN105a64b4.png'></image>
+                    <text>小米</text>
+                </view>
+                <view class='list-item'>
+                    <image src='https://img30.360buyimg.com/focus/jfs/t13411/188/926813276/3945/a4f47292/5a1692eeN105a64b4.png'></image>
+                    <text>小米</text>
+                </view>
+                <view class='list-item'>
+                    <image src='https://img30.360buyimg.com/focus/jfs/t13411/188/926813276/3945/a4f47292/5a1692eeN105a64b4.png'></image>
+                    <text>小米</text>
+                </view>
+                <view class='list-item'>
+                    <image src='https://img30.360buyimg.com/focus/jfs/t13411/188/926813276/3945/a4f47292/5a1692eeN105a64b4.png'></image>
+                    <text>小米</text>
+                </view>
+                <view class='list-item'>
+                    <image src='https://img30.360buyimg.com/focus/jfs/t13411/188/926813276/3945/a4f47292/5a1692eeN105a64b4.png'></image>
+                    <text>小米</text>
+                </view>
+              </view>
+            </view>
+            <view class='list'>
+              <text class='list-title'>热门品牌</text>
+              <view class='list-content'>
+                <view class='list-item'>
+                    <image src='https://img30.360buyimg.com/focus/jfs/t13411/188/926813276/3945/a4f47292/5a1692eeN105a64b4.png'></image>
+                    <text>小米</text>
+                </view>
+                <view class='list-item'>
+                    <image src='https://img30.360buyimg.com/focus/jfs/t13411/188/926813276/3945/a4f47292/5a1692eeN105a64b4.png'></image>
+                    <text>小米</text>
+                </view>
+                <view class='list-item'>
+                    <image src='https://img30.360buyimg.com/focus/jfs/t13411/188/926813276/3945/a4f47292/5a1692eeN105a64b4.png'></image>
+                    <text>小米</text>
+                </view>
+                <view class='list-item'>
+                    <image src='https://img30.360buyimg.com/focus/jfs/t13411/188/926813276/3945/a4f47292/5a1692eeN105a64b4.png'></image>
+                    <text>小米</text>
+                </view>
+                <view class='list-item'>
+                    <image src='https://img30.360buyimg.com/focus/jfs/t13411/188/926813276/3945/a4f47292/5a1692eeN105a64b4.png'></image>
+                    <text>小米</text>
+                </view>
+                <view class='list-item'>
+                    <image src='https://img30.360buyimg.com/focus/jfs/t13411/188/926813276/3945/a4f47292/5a1692eeN105a64b4.png'></image>
+                    <text>小米</text>
+                </view>
+              </view>
+            </view>
+            <view class='list'>
+              <text class='list-title'>热门品牌</text>
+              <view class='list-content'>
+                <view class='list-item'>
+                    <image src='https://img30.360buyimg.com/focus/jfs/t13411/188/926813276/3945/a4f47292/5a1692eeN105a64b4.png'></image>
+                    <text>小米</text>
+                </view>
+                <view class='list-item'>
+                    <image src='https://img30.360buyimg.com/focus/jfs/t13411/188/926813276/3945/a4f47292/5a1692eeN105a64b4.png'></image>
+                    <text>小米</text>
+                </view>
+                <view class='list-item'>
+                    <image src='https://img30.360buyimg.com/focus/jfs/t13411/188/926813276/3945/a4f47292/5a1692eeN105a64b4.png'></image>
+                    <text>小米</text>
+                </view>
+                <view class='list-item'>
+                    <image src='https://img30.360buyimg.com/focus/jfs/t13411/188/926813276/3945/a4f47292/5a1692eeN105a64b4.png'></image>
+                    <text>小米</text>
+                </view>
+                <view class='list-item'>
+                    <image src='https://img30.360buyimg.com/focus/jfs/t13411/188/926813276/3945/a4f47292/5a1692eeN105a64b4.png'></image>
+                    <text>小米</text>
+                </view>
+                <view class='list-item'>
+                    <image src='https://img30.360buyimg.com/focus/jfs/t13411/188/926813276/3945/a4f47292/5a1692eeN105a64b4.png'></image>
+                    <text>小米</text>
+                </view>
+              </view>
+            </view>
+         </view>
+      </scroll-view>
+  </view>
+</view>

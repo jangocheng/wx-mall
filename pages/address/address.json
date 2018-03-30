@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "收货列表",
+  "usingComponents":{
+    "w-icon":"/components/icon/icon",
+    "w-address": "/components/address/address"
+  }
+}

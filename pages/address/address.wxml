@@ -1,0 +1,20 @@
+<!--pages/address/address.wxml-->
+<!--判断后台有没有收货地址数据，如果有no-address-wrapper 不显示，否则显示存在address的界面-->
+<!--如果选择了地址发送请求再后台再渲染-->
+<view class="no-address-wrapper" style="display:none;">
+  <view class="no-address">
+    <w-icon icon="location" size="80" style="color:#999"></w-icon>
+    <text style='font-size:14px'>您还没有收货地址</text>
+  </view>
+  <view class='no-address-btn'>
+    <button type="warn" style="margin-bottom:30rpx;">新增地址</button>
+    <button type="primary">从微信获取新地址</button>
+  </view>
+</view>
+<view class="address-wrapper">
+  <w-address addressData="{{address}}"></w-address >
+  <view class="address-btn">
+    <button type="warn" class='address-btn-item' bindtap='wechatAddress'>从微信获取地址</button>
+    <button type="primary" class='address-btn-item' bindtap='addAddress'>新增地址</button>
+  </view>
+</view>

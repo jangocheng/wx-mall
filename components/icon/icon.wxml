@@ -1,0 +1,2 @@
+<!--components/icon/icon.wxml-->
+<text class="v-icon v-icon-{{icon}}" style="font-size:{{size}}px"></text>

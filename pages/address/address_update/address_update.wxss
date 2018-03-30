@@ -1,0 +1,37 @@
+/* pages/address/address_update/address_update.wxss */
+page{
+  background: #eee;
+}
+.input-cell{
+  padding: 0 30rpx;
+  background: #fff;
+}
+.address-update-block{
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #eee;
+}
+.input-name{
+  font-size: 14px;
+  width: 200rpx;
+}
+.placeholder{
+  font-size: 14px;
+}
+.input{ 
+  flex: 1;
+  word-wrap: break-word;
+  font-size: 14px;
+}
+
+.btn-area{
+  padding: 30rpx;
+}
+.picker{
+  font-size: 14px;
+}
+.textarea{
+  flex: 1;
+  font-size: 14px;
+}

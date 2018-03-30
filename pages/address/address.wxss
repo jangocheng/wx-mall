@@ -1,0 +1,29 @@
+/* pages/address/address.wxss */
+page{
+  background: #f6f8fa;
+  padding-bottom: 112rpx;
+}
+.address{
+
+}
+.no-address{
+  padding: 160rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.no-address-btn{
+  padding: 40rpx;
+}
+.address-btn{
+  width:100%; 
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.address-btn-item{
+  flex: 1;
+  border-radius: 0;
+}

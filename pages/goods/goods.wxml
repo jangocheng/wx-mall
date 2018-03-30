@@ -1,0 +1,149 @@
+<!--pages/goods/goods.wxml-->
+<view class='goods-detail__wrapper' >
+    <view class="swiper-wrapper" style='position:relative;'>
+        <swiper style='height:750rpx;border-bottom:1px solid #eee;' bindchange="swiperChange">
+          <block wx:for="{{imgUrls}}" wx:key="index">
+            <swiper-item>
+              <image src="{{item}}" class="slide-image"/>
+            </swiper-item>
+          </block>
+              </swiper>
+          <view class="dot">
+              <text>{{swiperIndex}}</text>
+              <text>/</text>
+              <text>{{imgUrls.length}}</text>
+          </view>
+    </view>
+    <view class='goods-info'>
+      <view class='goods-title-wrapper'>
+      <text class='goods-title'>卡姿兰眼线笔不晕染持久眼线液笔液体眼线防水正品包邮初学者彩妆</text>
+      <view class='goods-share'>
+        <w-icon icon="share" size="24"></w-icon>
+        <text>分享</text>
+      </view>
+      </view>
+      <view class='goods-des'>
+      持久不易晕染 炫黑显色 易卸妆
+      </view>
+      <view class='goods-other'>
+        <view >
+            <text class='price'>￥49.00</text>
+            <text class='market-price'>￥69.00</text>
+        </view>
+        <view>
+            <text class="sell-number">销量:100件</text>
+        </view>
+      </view>
+    </view>
+    <view class='goods-option' style="margin:16rpx 0">
+      <w-cell text="优惠券" icon="ticket" >
+          <view slot="custom" class='ticket-info'>
+            <text class='custom-text-style ticket-style'>满100减30</text>
+            <text class='custom-text-style ticket-style'>满100减30</text>
+          </view>
+      </w-cell>
+    </view>
+    <view class='goods-option' style="margin:16rpx 0">
+      <w-cell text="已选择" icon="write" bindtap="showModal">
+        <view slot="custom">
+          <text class="custom-text-style">白金</text>
+          <text class="custom-text-style">1</text>
+        </view>
+      </w-cell>
+    </view>
+    <view class="shop-block">
+      <view class="shop-title">
+        <image src='https://img30.360buyimg.com/focus/jfs/t13411/188/926813276/3945/a4f47292/5a1692eeN105a64b4.png' class="shop-avatar"></image>
+        <text class='shop-name'>小米旗舰店</text>
+      </view>
+      <view class="shop-btn-wrapper">
+          <view class="shop-btn">
+            <w-icon icon="shoplight"></w-icon>
+            <text class='shop-btn-name'>全部商品</text>
+          </view>
+          <view class="shop-btn">
+            <w-icon icon="shoplight"></w-icon>
+            <text class='shop-btn-name'>进入店铺</text>
+          </view>
+      </view>
+    </view>
+    <view class="goods-tabs">
+      <view class="tabs-title">
+        <text class='tabs-title-name {{tabIndex==index ? "tabsActive":""}}' wx:for="{{tabs}}" wx:key="index"
+          data-index='{{index}}'
+          bindtap='handleTabs'
+        >{{item}}</text>
+      </view>
+      <view class='tabs-item-wrapper'>
+        <view class='tabs-item' hidden="{{tabIndex != 0 }}">
+          <image src='http://img20.360buyimg.com/vc/jfs/t2908/56/2251803334/290483/7c566031/575cc984N459a7061.gif' class="goods-image"></image>
+          <image src='http://img20.360buyimg.com/vc/jfs/t2908/56/2251803334/290483/7c566031/575cc984N459a7061.gif' class="goods-image"></image>
+          <image src='http://img20.360buyimg.com/vc/jfs/t2908/56/2251803334/290483/7c566031/575cc984N459a7061.gif' class="goods-image"></image>
+          <image src='http://img20.360buyimg.com/vc/jfs/t2908/56/2251803334/290483/7c566031/575cc984N459a7061.gif' class="goods-image"></image>
+        </view>
+        <view class='tabs-item' hidden="{{tabIndex  != 1}}">
+            <view class="table-block">
+              <view class='table-title'>
+                <text>产地</text>
+                <text>品牌</text>
+                <text>产地</text>
+                <text>产地</text>
+                <text>产地</text>
+                <text>产地</text>
+              </view>
+              <view class='table-content'>
+                <text>云南</text>
+                <text>Nike</text>
+                <text>Nike</text>
+                <text>Nike</text>
+                <text>Nike</text>
+                <text>Nike</text>
+              </view>
+            </view>
+        </view>
+      </view>
+    </view>
+    <view class='goods-btn-wrapper'>
+        <view class='goods-btn-small'>
+          <w-icon icon="my"></w-icon>
+          <text>我的</text>
+        </view>
+        <view class='goods-btn-small'>
+          <w-icon icon="cart"></w-icon>
+          <text>购物车</text>
+        </view>
+        <view class='goods-btn-small'>
+          <w-icon icon="shoplight"></w-icon>
+          <text>店铺</text>
+        </view>
+        <view class="goods-btn-big bg-red" bindtap="showModal">加入购物车</view>
+        <view class="goods-btn-big bg-green">立即购买</view>  
+    </view>
+</view>
+ <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+  <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+    <view class='top'>
+      <image class="goods-small-image" src='http://xjd6.oss-cn-beijing.aliyuncs.com/images/shop/8/2016/06/30/14672682462298.jpg?x-oss-process=image/resize,m_pad,limit_0,h_450,w_450'></image>
+      <view class='popup-goods-info'>
+        <text class="price" style='margin-bottom:10rpx;'>￥108.00</text>
+        <text class="popup-other-color">库存：98件</text>
+        <view class="popup-other-color">已选：<text>白金</text></view>
+      </view>
+    </view>
+    <view class='middle'>
+      <view class="commodity_attr_list">
+        <view class='attr_wrapper' wx:for="{{attrValueList}}" wx:for-item="attrValueObj" wx:for-index="attrIndex">
+          <view class='attr_name'>{{attrValueObj.attrKey}}</view>
+          <view class='attr_value_wrapper'>
+            <view class="attr_value  {{attrIndex==firstIndex || attrValueObj.attrValueStatus[valueIndex]? (value==attrValueObj.selectedValue?'attr_value_active':''):'attr_value_disabled'}}" bindtap="selectAttrValue" data-status="{{attrValueObj.attrValueStatus[valueIndex]}}" data-value="{{value}}" data-key="{{attrValueObj.attrKey}}" data-index="{{attrIndex}}" data-selectedvalue="{{attrValueObj.selectedValue}}" wx:for="{{attrValueObj.attrValues}}" wx:for-item="value" wx:for-index="valueIndex"> 
+              {{value}}
+            </view>
+          </view>
+        </view>
+        <view class="weui-btn-area">  
+            <button class="weui-btn" type="primary" bindtap="submit">确定</button>  
+        </view>
+      </view>
+    </view>
+</view>
+

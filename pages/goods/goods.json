@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "商品详情页",
+  "usingComponents":{
+    "w-icon":"/components/icon/icon",
+    "w-cell":"/components/cell/cell"
+  }
+}

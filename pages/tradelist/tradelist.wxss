@@ -1,0 +1,54 @@
+/* pages/tradelist/tradelist.wxss */
+page,
+.page,
+.page__bd{
+    height: 100%;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+.weui-tab__content{
+    padding-top: 60px;
+    text-align: center;
+}
+.weui-navbar {
+    display: flex;
+    position: absolute;
+    z-index: 500;
+    top: 0;
+    width: 100%;
+    border-bottom: 1rpx solid #CCCCCC;
+}
+
+.weui-navbar__item {
+    position: relative;
+    display: block;
+    flex: 1;
+    padding: 13px 0;
+    text-align: center;
+    font-size: 0;
+}
+.weui-bar__item_on {
+  color: #ff0000;
+}
+.weui-navbar__slider {
+    position: absolute;
+    content: " ";
+    left: 0;
+    bottom: 0;
+    width: 6em;
+    height: 3px;
+    background:#ff0000; 
+    transition: transform .3s;
+}
+.weui-navbar__title{
+    display: inline-block;
+    font-size: 15px;
+    max-width: 8em;
+}
+.no-list-wrapper{
+  display: flex;
+  flex-direction: column;
+  padding: 160rpx 0;
+  color: #666;
+}
